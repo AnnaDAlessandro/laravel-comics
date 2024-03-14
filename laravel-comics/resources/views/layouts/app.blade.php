@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comics</title>
- 
-     @vite('resources/js/app.js')
+    <title>DC COMICS</title>
+    @vite('resources/js/app.js')
 </head>
 <body>
-    <h1 class="text-center">
-        Ciao
-    </h1>
+    @include('partials.header')
+    
 </body>
 </html>
