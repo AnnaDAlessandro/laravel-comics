@@ -14,5 +14,52 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.welcome');
+    
+    $menuLinks=[
+        [
+            'name' =>'CHARACTERS',
+            'current'=>false
+        ],
+        [
+             'name'=>'COMICS',
+             'current'=>true
+        ],
+        [
+            'name'=>'MOVIES',
+            'current'=>false
+        ],
+        [
+            'name'=>'TV',
+            'current'=>false
+        ],
+        [
+            'name'=>'GAMES',
+            'current'=>false
+        ],
+        [
+            'name'=>'COLLECTIBLES',
+            'current'=>false
+        ],
+        [
+            'name'=>'VIDEOS',
+            'current'=>false
+        ],
+        [
+            'name'=>'FANS',
+            'current'=>false
+        ],
+        [
+            'name'=>'NEWS',
+            'current'=>false
+        ],
+        [ 
+            'name'=>'SHOP',
+            'current'=>false
+        ]
+              
+        ];
+
+        $comics= config('comics');
+
+    return view('pages.welcome', compact('menuLinks','comics'));
 });
