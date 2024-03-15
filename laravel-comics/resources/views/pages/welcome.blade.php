@@ -22,6 +22,23 @@
    
    </div> 
     <div class="bg-blue">
+   
+    <div>
+            <ul>
+            @foreach($menuItem as $item)
+                <li
+                v-for="(element,index) in menuImage"
+                :key="index"> 
+                <figure>
+                    <img src="{{ Vite::asset('resources/image/'. $item['image']) }}" alt="">
+                </figure>
+                <span>{{$item['name']}}</span>
+              </li>
+             @endforeach
+            </ul>
+        </div>
+   
+
      <div>
       <ul>
         

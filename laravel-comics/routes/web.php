@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { 
     
     $menuLinks=[
         [
@@ -28,7 +28,7 @@ Route::get('/', function () {
             'name'=>'MOVIES',
             'current'=>false
         ],
-        [
+        [ 
             'name'=>'TV',
             'current'=>false
         ],
@@ -61,5 +61,29 @@ Route::get('/', function () {
 
         $comics= config('comics');
 
-    return view('pages.welcome', compact('menuLinks','comics'));
-});
+        $menuItem=[
+            [ 
+                'name'=>"DIGITAL COMICS",
+                'image'=>"buy-comics-digital-comics.png"
+            ],
+            [ 
+                'name'=>"DC MERCHANDISE",
+                'image'=>"buy-comics-merchandise.png"
+            ],
+            [ 
+                'name'=>"SUBSCRIPTIONS",
+                'image'=>"buy-comics-subscriptions.png"
+            ],
+             [ 
+                'name'=>"COMICS SHOP LOCATOR",
+                'image'=>"buy-comics-shop-locator.png"
+
+            ],
+            [ 
+                'name'=>"DC POWER VISA",
+                'image'=>"buy-dc-power-visa.svg"
+            ]
+            ];
+
+    return view('pages.welcome', compact('menuLinks','comics','menuItem'));
+        })-> name('homepage');

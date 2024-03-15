@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-sm navbar-light p-2  gap-5">
             
               <div class="">
-                <img width="100" src="{{ Vite::asset('resources/image/dc-logo.png') }}" alt="">
+                <img width="80" src="{{ Vite::asset('resources/image/dc-logo.png') }}" alt="">
             </div>
 
             <div class="collapse navbar-collapse" id="collapsibleNavId">
